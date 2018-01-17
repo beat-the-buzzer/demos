@@ -1,0 +1,90 @@
+###日期格式化
+
+Java语言中，有一个SimpleDateFormat类，这个类可以实现日期的格式转换，但是JavaScript没有提供类似的方法去格式化日期，因此，我们需要自己去写一个格式化日期的方法。
+
+	/** 
+	 * 对日期进行格式化， 
+	 * @param date 要格式化的日期 
+	 * @param format 进行格式化的模式字符串
+	 *     支持的模式字母有： 
+	 *     y:年, 
+	 *     M:年中的月份(1-12), 
+	 *     d:月份中的天(1-31), 
+	 *     h:小时(0-23), 
+	 *     m:分(0-59), 
+	 *     s:秒(0-59), 
+	 *     S:毫秒(0-999),
+	 *     q:季度(1-4)
+	 * @return String
+	 * @author yanis.wang@gmail.com
+	 **/
+
+	function dateFormat(date, format) {
+	    if(format === undefined){
+	        format = date;
+	        date = new Date();
+	    }
+	    var map = {
+	        "M": date.getMonth() + 1, //月份 
+	        "d": date.getDate(), //日 
+	        "h": date.getHours(), //小时 
+	        "m": date.getMinutes(), //分 
+	        "s": date.getSeconds(), //秒 
+	        "q": Math.floor((date.getMonth() + 3) / 3), //季度 
+	        "S": date.getMilliseconds() //毫秒 
+	    };
+	    format = format.replace(/([yMdhmsqS])+/g, function(all, t){
+	        var v = map[t];
+	        if(v !== undefined){
+	            if(all.length > 1){
+	                v = '0' + v;
+	                v = v.substr(v.length-2);
+	            }
+	            return v;
+	        }
+	        else if(t === 'y'){
+	            return (date.getFullYear() + '').substr(4 - all.length);
+	        }
+	        return all;
+	    });
+	    return format;
+	}
+	
+	//如果不传日期，默认格式化new Date()
+	console.log(dateFormat('yyyy-MM-dd hh:mm:ss'));
+	console.log(dateFormat(new Date(), 'yyyy/MM/dd'));
+
+当然，我们也可以根据自己的需要去改造这个方法，例如，后台给我们返回的日期格式的数据都是8位的，即20180101这样的格式，我们如何去格式化呢？
+
+	function ourDateFormat(date, format) {
+		if (date.toString().length == 8) {
+			date = date.toString();
+			date = date.substring(0, 4) + '-' + date.substring(4, 6) + '-' + date.substring(6, 8);
+		}
+		date = new Date(date);
+		var map = {
+			"M": date.getMonth() + 1, //月份 
+			"d": date.getDate(), //日 
+			"h": date.getHours(), //小时 
+			"m": date.getMinutes(), //分 
+			"s": date.getSeconds(), //秒 
+			"q": Math.floor((date.getMonth() + 3) / 3), //季度 
+			"S": date.getMilliseconds() //毫秒 
+		};
+		format = format.replace(/([yMdhmsqS])+/g, function(all, t) {
+			var v = map[t];
+			if (v !== undefined) {
+				if (all.length > 1) {
+					v = '0' + v;
+					v = v.substr(v.length - 2);
+				}
+				return v;
+			} else if (t === 'y') {
+				return (date.getFullYear() + '').substr(4 - all.length);
+			}
+			return all;
+		});
+		return format;
+	}
+	console.log(ourDateFormat('20180101','yyyy-MM-dd'));
+	console.log(ourDateFormat('20180101','yyyy/MM/dd'));
