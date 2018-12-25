@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>click</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+	<div style="width:100px;height:100px;"></div>
+</body>
+<script>
+	var data_index = 0;
+	$(document).ready(function ($) {
+		$("body").click(function (e) {
+			var data = ["（*@ο@*）", "（⊙o⊙）", "★~★", "(*^‧^*)", "（ˇ＾ˇ〉", "~>_<~+", "(≥◇≤)", "（*>.<*）", ">_<|||", "→_→", "└(^o^)┘", " (*^__^*)"];
+			var $showObj = $("<span></tagObj>").text(data[data_index]);
+				data_index = (data_index + 1) % data.length;
+			var x = e.pageX,
+				y = e.pageY;
+			$showObj.css({
+				"z-index": 1000,
+				"top": y - 20,
+				"left": x,
+				"position": "absolute",
+				"font-weight": "bold",
+				"color": "#ff6651"
+			});
+			$("body").append($showObj);
+			$showObj.animate({
+				"top": y - 180,
+				"opacity": 0
+			},
+				1500,
+				function () {
+					$showObj.remove();
+				});
+		})
+	})
+</script>
+</html>
