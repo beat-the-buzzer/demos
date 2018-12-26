@@ -11,3 +11,4 @@ Javascript方法：
 
  - [0.5像素的实现](https://github.com/beat-the-buzzer/demos/tree/master/halfPX)
  - [点击出现表情→_→](https://github.com/beat-the-buzzer/demos/tree/master/clickEmoji)
+ - [页面平滑滚动iscroll实现](https://github.com/beat-the-buzzer/demos/tree/master/iscroll)
