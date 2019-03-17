@@ -1,0 +1,48 @@
+.first-outer {
+  width: 200px;
+  height: 200px;
+  background: #EE6911;
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+}
+.first-inner {
+  width: 50px;
+  height: 50px;
+  background: #CCCC33;
+}
+
+
+.second-outer {
+  width: 200px;
+  height: 200px;
+  background: #EE6911;
+  position: relative;
+}
+.second-inner {
+  width: 50px;
+  height: 50px;
+  background: #CCCC33;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.third-outer {
+  width: 200px;
+  height: 200px;
+  background: #EE6911;
+  position: relative;
+}
+.third-inner {
+  width: 50px;
+  height: 50px;
+  background: #CCCC33;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
