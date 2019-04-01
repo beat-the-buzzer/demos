@@ -6,6 +6,7 @@ Javascript方法：
  - [accAdd 精确加法](https://github.com/beat-the-buzzer/demos/tree/master/accAdd)
  - [dateFormat 日期格式化](https://github.com/beat-the-buzzer/demos/tree/master/dateFormat)
  - [priceformat 价格格式化](https://github.com/beat-the-buzzer/demos/tree/master/priceformat)
+ - [getUrlParam 取出url后面带的参数](https://github.com/beat-the-buzzer/demos/tree/master/getUrlParam)
 
  页面效果
 

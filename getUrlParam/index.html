@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>getUrlParam获取Url带的参数</title>
+</head>
+<body>
+  <p>请打开浏览器调试！！！</p>
+  <p>如果需要看效果，就在浏览器地址栏后面加上参数，例如：XXX/index.html?type=1&name=tom</p>
+  <script>
+    function getUrlParam(url, key) { //定义函数
+		if (!url) {
+			url = window.location.href;
+		}
+		var urlformat = url;
+		var re = /[^?#&]+\=[^?#&]+/g;
+		var paramsarr = urlformat.match(re) || [];
+		var returnjson = {};
+		paramsarr.forEach((data) => {
+			var splitdata = data.split('=');
+			var sp0 = splitdata && splitdata[0];
+			var sp1 = splitdata && splitdata[1];
+			if (sp0) {
+				returnjson[sp0] = sp1;
+			}
+		});
+		if (key) {
+			var returnpart = returnjson && returnjson[key] || '';
+			return returnpart;
+		} else {
+			return returnjson;
+		}
+	}
+
+  var params = getUrlParam(window.location.href) || {};
+  console.log('参数对象：');
+  console.log(params);
+
+  </script>
+</body>
+</html>
