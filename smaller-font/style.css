@@ -1,0 +1,133 @@
+.w50 {
+  width: 50%;
+}
+.flex {
+  display: flex;
+}
+.fz5 {
+  font-size: 5px;
+}
+.fz6 {
+  font-size: 6px;
+}
+.fz7 {
+  font-size: 7px;
+}
+.fz8 {
+  font-size: 8px;
+}
+.fz9 {
+  font-size: 9px;
+}
+.fz10 {
+  font-size: 10px;
+}
+.fz11 {
+  font-size: 11px;
+}
+.fz12 {
+  font-size: 12px;
+}
+.fz13 {
+  font-size: 13px;
+}
+.fz14 {
+  font-size: 14px;
+}
+.fz15 {
+  font-size: 15px;
+}
+.fz16 {
+  font-size: 16px;
+}
+
+/** 使用CSS3 transform处理*/
+.my-fz5 {
+  font-size: 20px;
+  transform: scale(0.25);
+}
+.my-fz6 {
+  font-size: 24px;
+  transform: scale(0.25);
+}
+.my-fz7 {
+  font-size: 14px;
+  transform: scale(0.5);
+}
+.my-fz8 {
+  font-size: 16px;
+  transform: scale(0.5);
+}
+.my-fz9 {
+  font-size: 18px;
+  transform: scale(0.5);
+}
+.my-fz10 {
+  font-size: 20px;
+  transform: scale(0.5);
+}
+.my-fz11 {
+  font-size: 22px;
+  transform: scale(0.5);
+}
+.my-fz12 {
+  font-size: 24px;
+  transform: scale(0.5);
+}
+.my-fz13 {
+  font-size: 13px; 
+}
+.my-fz14 {
+  font-size: 14px;
+}
+.my-fz15 {
+  font-size: 15px;
+}
+.my-fz16 {
+  font-size: 16px;
+}
+/** 使用CSS3 zoom 处理*/
+.my-fz5-zoom {
+  font-size: 20px;
+  zoom: 0.25;
+}
+.my-fz6-zoom {
+  font-size: 24px;
+  zoom: 0.25;
+}
+.my-fz7-zoom {
+  font-size: 14px;
+  zoom: 0.5;
+}
+.my-fz8-zoom {
+  font-size: 16px;
+  zoom: 0.5;
+}
+.my-fz9-zoom {
+  font-size: 18px;
+  zoom: 0.5;
+}
+.my-fz10-zoom {
+  font-size: 20px;
+  zoom: 0.5;
+}
+.my-fz11-zoom {
+  font-size: 22px;
+  zoom: 0.5;
+}
+.my-fz12-zoom {
+  font-size: 24px;
+  zoom: 0.5;
+}
+.my-fz13-zoom {
+  font-size: 13px; 
+}
+.my-fz14-zoom {
+  font-size: 14px;
+}
+.my-fz15-zoom {
+  font-size: 15px;
+}
+.my-fz16-zoom {
+  font-size: 16px;
+}

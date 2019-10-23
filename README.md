@@ -15,3 +15,4 @@ Javascript方法：
  - [页面平滑滚动iscroll实现](https://github.com/beat-the-buzzer/demos/tree/master/iscroll)
  - [移动端上传头像和头像截取功能的实现](https://github.com/beat-the-buzzer/demos/tree/master/uploadImg)
  - [CSS实现div相对于父元素居中](https://github.com/beat-the-buzzer/demos/tree/master/center)
+ - [设置font-size < 12px](https://github.com/beat-the-buzzer/demos/tree/master/smaller-font)
