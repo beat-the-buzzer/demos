@@ -1,0 +1,10 @@
+@import './default.scss';
+@import './public.scss';
+
+li {
+  padding: 10px;
+  position: relative;
+  &::after {
+    @include borderBottom(#ccc);
+  }
+}

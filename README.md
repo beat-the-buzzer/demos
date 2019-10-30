@@ -10,7 +10,7 @@ Javascript方法：
 
  页面效果
 
- - [0.5像素的实现](https://github.com/beat-the-buzzer/demos/tree/master/halfPX)
+ - [半像素线的实现](https://github.com/beat-the-buzzer/demos/tree/master/half-px)
  - [点击出现表情→_→](https://github.com/beat-the-buzzer/demos/tree/master/clickEmoji)
  - [页面平滑滚动iscroll实现](https://github.com/beat-the-buzzer/demos/tree/master/iscroll)
  - [移动端上传头像和头像截取功能的实现](https://github.com/beat-the-buzzer/demos/tree/master/uploadImg)
